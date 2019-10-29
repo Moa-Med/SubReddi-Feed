@@ -1,7 +1,7 @@
 {
-  "name": "bannerflow",
+  "name": "Mohamed",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -26,8 +26,8 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "^8.3.13",
-    "@angular/compiler-cli": "^8.2.11",
+    "@angular/cli": "^7.3.13",
+    "@angular/compiler-cli": "^7.2.11",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
