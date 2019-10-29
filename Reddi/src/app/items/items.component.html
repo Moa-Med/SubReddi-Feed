@@ -1,0 +1,26 @@
+
+<no-result *ngIf="items?.length === 0"></no-result>
+
+<div class="container">
+  <ul id="og-grid" class="og-grid polaroid-images">
+    <li *ngFor="let item of items">
+      <div class="polaroid-image">
+          <a routerLink="/details/{{item.id}}" >
+            <img class="thumbnail-image" [src]="checkUrl(item.thumbnail)" [alt]="item.title" [title]="item.title" onError="this.src='assets/img/reddit.jpg'"/>
+            <div class="footer">
+              <h4>
+                {{ (item.title.length>42)? ((item.title | slice:0:42)+'...'):(item.title) }}
+              </h4>
+              <div class="sign">
+                <strong class="author">{{ item.author }}</strong> on <i class="created">{{ dateConverter(item.created) | date:'mediumDate' }}</i>
+              </div>
+              <div class="values left">
+                <i class="fas fa-trophy"></i> {{item.score}}
+                <i class="tab"></i><i class="fas fa-comments"></i>{{item.num_comments}}    
+              </div>
+            </div>
+          </a>
+      </div>
+    </li>
+  </ul>
+</div>

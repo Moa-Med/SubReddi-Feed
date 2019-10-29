@@ -1,0 +1,58 @@
+<div #element id="element" *ngIf="item">
+
+  <div class="fullscreen clickable" *ngIf="!imageUrlErro && showFocus" (click)="showFocus = false">
+      <img [src]="item.url" class="focused" />
+  </div>
+
+  <div class="container focused">
+    <div class="row">
+      <div class="close-bar">
+        <a (click)="goBack()">
+          <div id="close">
+              Close
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row margin-top">
+      <div class="col-sm-6 col-xs-12">
+        <div #polaroid class="polaroid-image" [ngClass]="{'potrait': potrait}">
+
+            <img #image class="clickable" *ngIf="!imageUrlError" [src]="item.url" (onError)="onImageError()" (load)="imageLoaded()" (click)="showFocus = true"/> 
+            <img #image *ngIf="imageUrlError" [src]="checkUrlSelfOrDefault(item.thumbnail)" onError="this.src = 'assets/img/reddit.jpg'" (load)="imageLoaded()"/>
+
+
+            <h4>{{item.title}}</h4>
+            <div class="footer">
+              <div class="sign">
+                  <a href="https://www.reddit.com{{item.permalink}}" target="_blank"><i class="fas fa-link"></i></a><i class="tab"></i>
+                  Posted by <strong class="author">{{ item.author }}</strong> on <i class="created">{{ dateConverter(item.created) | date:'mediumDate' }}</i>
+              </div>
+              <div class="values left">
+                <i class="fas fa-trophy"></i> {{item.score}}
+                <i class="tab"></i><i class="fas fa-comments"></i> {{item.num_comments}}
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <div id="text" class="margin-top">
+          <p *ngIf="item.selftext">
+            <i class="title-text">Text:</i><br/>
+            {{item.selftext}}
+          </p>
+          <h4 *ngIf="!item.selftext" class="noselftext">
+            no self text
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="comments" id="comments" class="margin-top">
+        <i class="title-text">Comments:</i><br/>
+       <div *ngFor="let comment of comments">
+         <comment [comment]="comment"></comment>
+       </div>
+     </div>
+  </div>
+</div>
+

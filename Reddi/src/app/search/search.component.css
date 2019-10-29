@@ -1,0 +1,88 @@
+/*LOADER FOG*/
+
+.fog {
+    display: block;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    padding-top: 40%;
+    padding-left: 40%;
+    background: rgba(201, 201, 201, 0.95)
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 46%;
+    border: 16px solid #ffffff; 
+    border-top: 16px solid #ff7b00; 
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display:none;
+}
+
+/* MAIN AREA */
+
+#body {
+    z-index: 10;
+    position: absolute;
+    width:100%;
+    height: auto;
+    min-height: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2015/03/26/09/47/sky-690293_960_720.jpg");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: top left;
+    background-size: auto;
+    transition: all 1s;
+}
+
+.top {
+    top: 0%;
+}
+
+.underHeader {
+    top: 100%;
+}
+
+.move-btn {
+    border-radius: 10px;
+    background: white; /* rgba(194, 209, 237, 0.9);*/
+    border: 2px solid white;
+    width: auto;
+    box-shadow: 5px 5px 6px rgb(60, 60, 60);
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.move-btn a:hover {
+    text-decoration: none;
+}
+
+.prev {
+    text-align: right;
+}
+
+.next {
+    text-align: left;
+}
+
+.maxwidth {
+    max-width: 100%;
+    margin: 0;
+}
+

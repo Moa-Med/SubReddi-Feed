@@ -1,0 +1,15 @@
+<div class="comment">
+  <p>{{comment.data.body}}</p>
+
+  <strong>{{comment.data.author}}</strong> - 
+  <i class="date">{{dateConverter(comment.data.created) | date:'h:mm a on d MMM, y' }}</i>
+  <i *ngIf="replies?.length > 0"> - </i>
+  <a (click)="showReplies = true" *ngIf="replies?.length > 0 && !showReplies">replies</a>
+  <a (click)="showReplies = false" *ngIf="replies?.length > 0 && showReplies">hide</a>
+
+  <div style="margin-left: 2em" *ngIf="replies && showReplies">
+    <div *ngFor="let reply of replies">
+      <comment [comment]="reply"></comment>
+    </div>
+  </div> 
+</div>

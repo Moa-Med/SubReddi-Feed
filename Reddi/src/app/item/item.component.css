@@ -1,0 +1,186 @@
+#element {
+    width:100%;
+    height: auto;
+    min-height: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2015/03/26/09/47/sky-690293_960_720.jpg");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: top left;
+    background-size: auto;
+    padding-bottom: 2em;
+}
+
+.close-bar {
+    width: 100%;
+    height: auto;
+}
+
+#close {
+    width:20%;
+    height:auto;
+    background:#FFF;
+    padding: 10px;
+    margin-top: 1em;
+    text-align: center;
+    box-shadow: 5px 10px 10px #777;
+    transform: rotate(5deg);
+    border-radius: 5px; 
+    position: absolute;
+    right: 1%;
+    z-index: 5;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.margin-top {
+    margin-top: 2em;
+}
+
+/**POLAROID*/
+.polaroid-image
+ {
+     background: white;
+     float: left;
+     margin: 0 15px 30px;
+     padding: 10px;
+     text-align: center;
+     text-decoration: none;
+     -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+     -moz-box-shadow: 0 4px 6px rgba(0,0,0,.5);
+     box-shadow: 0 4px 6px rgba(0,0,0,.5);
+     -webkit-transition: all .5s ease-in-out;
+     -moz-transition: all .5s ease-in-out;
+     transition: all 0.5s ease-in-out;
+     transform: all .5s ease-in-out;
+     z-index:0;
+     -webkit-transform: rotate(-4deg);  
+     -moz-transform: rotate(-4deg); 
+     transform: rotate(-4deg);
+     width: 80%;
+     height: auto;
+}
+
+.potrait {
+    width: 60%;
+}
+
+@media screen and (max-width: 700px) {
+    .polaroid-image {
+        width: 70%;
+    } 
+}
+ 
+.polaroid-image .footer {
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.polaroid-image img {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.polaroid-image h4 {
+    font-size: 100%;
+    text-align: center;
+    color: rgb(80, 80, 80);
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+.sign {
+    width: inherit;
+    text-align: right;
+    font-size: 80%;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    text-align: right;
+    color: rgb(131, 131, 131);
+}
+
+.values {
+    width: inherit;
+    left: 0;
+    right: 0;
+    padding-top: 0.5em;
+    font-size: 70%;
+    color: rgb(55, 55, 55);
+}
+
+.left {
+    text-align: left;
+}
+
+.tab {
+    padding-left: 1em;
+}
+
+/**TEXT*/
+
+.title-text {
+    color: grey;
+    font-size: 80%;
+}
+
+#text {
+    z-index: 5;
+    width:100%;
+    height:auto;
+    min-height:10em;
+    background:#FFF;
+    padding: 1em;
+    box-shadow: 3px 7px 8px #777;
+    transform: rotate(2deg);
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+.noselftext {
+    color: rgb(170, 170, 170);
+    text-align: center;
+    margin-top: 2.5em;
+    font-size: 140%;
+}
+
+#comments {
+    z-index: 5;
+    width:100%;
+    height:auto;
+    background:#FFF;
+    padding: 1em;
+    box-shadow: 3px 7px 8px #777;
+    border-radius: 3px; 
+}
+
+/*FOCUS*/
+
+.fullscreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    padding: 2%;
+    background: rgba(0, 0, 0, .7);
+    text-align: center;
+}
+
+.focused {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow:  3px 7px 8px rgba(0, 0, 0, .8)
+}
+
+.clickable {
+    cursor: pointer;
+}

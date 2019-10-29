@@ -1,0 +1,25 @@
+<div id="input-bar" class="container">
+  <div clas="row">
+    <div class="col-sm-6 center">
+        <div class="row">
+            <div class="col-xs-8">
+                <input (keyup.enter)="onSearch()" [(ngModel)]="searchInput" type="text" id="search-bar" placeholder="Search...">
+                <a (click)="onSearch()"><i class="search-icon fa fa-search"></i></a>
+            </div>
+            <div class="col-xs-4 center">
+              <a (click)="onSortScore()"><i class="fa fa-trophy bar-icon"></i></a>
+              <a (click)="onSortComments()"><i class="fa fa-comments bar-icon"></i></a>
+              <a (click)="onSortRecent()"><i class="fa fa-clock bar-icon"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 right">
+      <div class="page-container">
+        <i style="padding-right: 1em;">Items in page: </i>
+        <a class="pageNum" [class.underline]="itemsInPage === 5" (click)="onPageChange(5)"><strong> 05</strong></a>
+        <a class="pageNum" [class.underline]="itemsInPage === 10" (click)="onPageChange(10)"><strong> 10</strong></a>
+        <a class="pageNum" [class.underline]="itemsInPage === 25" (click)="onPageChange(25)"><strong> 25 </strong></a>
+      </div> 
+    </div>
+  </div>
+</div> 

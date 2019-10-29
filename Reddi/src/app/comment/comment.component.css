@@ -1,0 +1,20 @@
+.comment {
+    margin-top: 1em;
+    padding-left: .5em;
+    padding-top: 0.5em;
+    border-left: 2px solid rgb(143, 143, 143);
+    word-wrap: break-word;
+}
+
+.comment::before {
+    height: 0.5em;
+    border-top: 2px solid rgb(143, 143, 143);
+    content: '';
+    display: block;
+    width: 50%;
+    margin-top: -1em;
+}
+
+.date {
+    color: rgb(160, 160, 160);
+}
